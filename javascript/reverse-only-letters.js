@@ -18,9 +18,10 @@ function reverseOnlyLetters(str) {
   for (let i = 0; i < str.length; i++) {
     if (positionsMap[i] !== undefined) {
       result += str[positionsMap[i]];
-    } else {
-      result += str[i];
+      continue;
     }
+
+    result += str[i];
   }
 
   return result;
