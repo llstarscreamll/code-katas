@@ -1,30 +1,21 @@
 function reverseOnlyLetters(str) {
-  let result = "";
   let lettersIndexes = [];
 
-  for (let i = 0; i < str.length; i++) {
-    if (str[i].match(/[a-zA-Z]/)) {
-      lettersIndexes.push(i);
-    }
-  }
+  str
+    .split("")
+    .forEach((v, k) => v.match(/[a-zA-Z]/) && lettersIndexes.push(k));
 
   let reversedLettersIndexes = [...lettersIndexes].reverse();
   let positionsMap = {};
 
-  for (let i = 0; i < lettersIndexes.length; i++) {
-    positionsMap[lettersIndexes[i]] = reversedLettersIndexes[i];
-  }
+  lettersIndexes.forEach(
+    (v, k) => (positionsMap[v] = reversedLettersIndexes[k])
+  );
 
-  for (let i = 0; i < str.length; i++) {
-    if (positionsMap[i] !== undefined) {
-      result += str[positionsMap[i]];
-      continue;
-    }
-
-    result += str[i];
-  }
-
-  return result;
+  return str
+    .split("")
+    .map((v, k, arr) => (v = arr[positionsMap[k]] || v))
+    .join("");
 }
 
 module.exports = reverseOnlyLetters;
