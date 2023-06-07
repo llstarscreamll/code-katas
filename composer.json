@@ -1,0 +1,20 @@
+{
+  "name": "j0h4n/code-katas",
+  "description": "code-katas",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^10.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Johan Alvarez",
+      "email": "llstarscreamll@hotmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "php/BirthdayCakeCandles.php"
+    ]
+  }
+}
