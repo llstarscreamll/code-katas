@@ -14,7 +14,8 @@
   ],
   "autoload": {
     "files": [
-      "php/BirthdayCakeCandles.php"
+      "php/BirthdayCakeCandles.php",
+      "php/isFibonacci.php"
     ]
   }
 }
